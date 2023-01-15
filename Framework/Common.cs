@@ -55,8 +55,18 @@ namespace Framework
         {
             Driver.OpenPage("https://www.skytech.lt/shopping_cart.php");
         }
-        
-        
+        internal static void ClearInputElement(string locator)
+        {
+            GetElement(locator).Clear();
+        }
+
+        internal static void SelectOptionByText(string selectElementLocator, string optionText)
+        {
+            SelectElement selectElement = GetSelectElement(selectElementLocator);
+            selectElement.SelectByText(optionText);
+        }
+
+
         //internal static void HoverAction(string locator)
         //{
         //    IWebElement target = GetElement(locator);

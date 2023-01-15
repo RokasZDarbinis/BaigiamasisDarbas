@@ -27,10 +27,7 @@ namespace Framework.POM
                 Common.ClickElement("//*[@id=\"centerpanel\"]/div[8]/div[3]/form/table/tbody/tr[2]/td/div/div/div[2]/div/div[2]/input");
                 Common.GoToShoppingCart();
             }
-            else
-            {
-                Driver.StopDriver();
-            }
+            
 
         }
 

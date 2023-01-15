@@ -12,34 +12,34 @@ namespace Tests
 {
     internal class AkcijosTests
     {
-        //internal class SingularItem
-        //{
-        //    [SetUp]
-        //    public void Setup()
-        //    {
-        //        HomePage.Startup();
+        internal class SingularItem
+        {
+            [SetUp]
+            public void Setup()
+            {
+                HomePage.Startup();
 
-        //    }
+            }
 
-        //    [Test]
+            [Test]
 
-        //    public void BuyingFromAkcijos()
-        //    {
-        //        Akcijos.GoingToAkcijosAusines();
-        //        Akcijos.ClickingOnDesiredDiscountedHeadphone();
-        //        Akcijos.CheckingIfItemIsStillDiscounted();
-        //        string actualPrice = ShoppingCart.CheckingIfThePriceIsStillCorrect();
-        //        string desiredPrice = "Suma: 77.99 €";
+            public void BuyingFromAkcijos()
+            {
+                Akcijos.GoingToAkcijosAusines();
+                Akcijos.ClickingOnDesiredDiscountedHeadphone();
+                Akcijos.CheckingIfItemIsStillDiscounted();
+                string actualPrice = ShoppingCart.CheckingIfThePriceIsStillCorrect();
+                string desiredPrice = "Suma: 77.99 €";
 
-        //        Assert.AreEqual(desiredPrice, actualPrice);
-        //    }
-        //    [TearDown]
+                Assert.AreEqual(desiredPrice, actualPrice);
+            }
+            [TearDown]
 
-        //    public void Stop()
-        //    {
-        //        Driver.StopDriver();
-        //    }
-        //}
+            public void Stop()
+            {
+                Driver.StopDriver();
+            }
+        }
         internal class MultipleItems
         {
             [SetUp]
@@ -61,6 +61,11 @@ namespace Tests
                 Assert.AreEqual(desiredPrice, actualPrice);
 
 
+            }
+            [TearDown]
+            public static void ProgramSTOP()
+            {
+                Driver.StopDriver();
             }
         }
     }

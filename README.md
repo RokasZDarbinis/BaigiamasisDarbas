@@ -31,7 +31,7 @@ Say getting a great deal on some headphones wasn't enough and now you want a new
 ### Action 2: Searching and buying multiple of an item
 	Step 1. Open the [page](https://www.skytech.lt)
 	Step 2. Type in "DDR4 Ram" and click Search
-	Step 3. (Maybe) Select "Rusiavimas: Kaina 0-100"
+	Step 3. Select "Rusiavimas: Kaina 1-100"
 	Step 4. Click on "ADATA Premier DDR4 RAM 8 GB, DIMM, 3200 MHz" Ram
 	Step 5. Select 2 and click add to cart
 	Step 6. Make sure everything's done correct
@@ -40,7 +40,7 @@ Say getting a great deal on some headphones wasn't enough and now you want a new
 	Step 2. Pick Intels anyway
 	Step 3. Open the [page](https://www.skytech.lt)
 	Step 4. Type in "i7-13700K" in the search bar and click search
-	Step 5. Click on the the CPU(not the KF or pc's having it)
+	Step 5. Click on the the CPU(not the KF or the pc's having it)
 	Step 6. Add to cart
 	Step 7. type "Rtx 4090" in the seach bar and click search
 	Step 8. Click on the Asus Version of the graphics card
