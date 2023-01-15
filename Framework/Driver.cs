@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing.Imaging;
+using System.IO;
 
 namespace Framework
 {
@@ -27,6 +29,14 @@ namespace Framework
         public static void PageBack()
         {
             driver.Navigate().Back();
+        }
+        public static void TakeScreenshot()
+        {
+            string screenshotsDirectoryPath = $"{AppDomain.CurrentDomain.BaseDirectory}screenshots";
+            string screenshotName = $"{screenshotsDirectoryPath}\\scr-{Guid.NewGuid()}.png";
+            Directory.CreateDirectory(screenshotsDirectoryPath);
+            Screenshot screenshot = ((ITakesScreenshot)driver).GetScreenshot();
+            screenshot.SaveAsFile(screenshotName, ScreenshotImageFormat.Png);
         }
     }
 }

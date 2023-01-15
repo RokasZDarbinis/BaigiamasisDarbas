@@ -1,6 +1,7 @@
 ﻿using Framework;
 using Framework.POM;
 using NUnit.Framework;
+using NUnit.Framework.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,7 +38,16 @@ namespace Tests
 
             public void Stop()
             {
-                Driver.StopDriver();
+                if (TestContext.CurrentContext.Result.Outcome != ResultState.Failure)
+                {
+
+                    Driver.StopDriver();
+                }
+                else
+                {
+                    Driver.TakeScreenshot();
+                    Driver.StopDriver();
+                }
             }
         }
         internal class MultipleItems
@@ -45,7 +55,7 @@ namespace Tests
             [SetUp]
             public void Setup()
             {
-                HomePage.Startup(); 
+                HomePage.Startup();
             }
             [Test]
             public void BuyingFromAkcijosMultiple()
@@ -55,7 +65,7 @@ namespace Tests
                 Akcijos.NavigatingToAkcijosMobTel();
                 Akcijos.DecidingWhichPhoneIsABetterDeal();
                 Akcijos.AddingBetterPhoneDealAndGoingToShoppingCart();
-                string actualPrice=ShoppingCart.CheckingIfThePriceIsStillCorrect();
+                string actualPrice = ShoppingCart.CheckingIfThePriceIsStillCorrect();
                 string desiredPrice = "Suma: 1 066.99 €";
 
                 Assert.AreEqual(desiredPrice, actualPrice);
@@ -65,7 +75,16 @@ namespace Tests
             [TearDown]
             public static void ProgramSTOP()
             {
-                Driver.StopDriver();
+                if (TestContext.CurrentContext.Result.Outcome != ResultState.Failure)
+                {
+
+                    Driver.StopDriver();
+                }
+                else
+                {
+                    Driver.TakeScreenshot();
+                    Driver.StopDriver();
+                }
             }
         }
     }

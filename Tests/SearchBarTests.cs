@@ -1,6 +1,7 @@
 ﻿using Framework;
 using Framework.POM;
 using NUnit.Framework;
+using NUnit.Framework.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,13 +28,22 @@ namespace Tests
                 //Assert.AreEqual(norimasTekstas, patikrinimas );
                 SearchBar.CheckIfSelectedItemIsCorrect("Gigabyte Z690 GAMING X DDR4 1.0 M/B Processor family Intel, Processor socket LGA1700, DDR4 DIMM, Memory slots 4, Supported hard disk drive interfaces ...");
                 string esamaSuma = ShoppingCart.CheckingIfThePriceIsStillCorrect();
-                string tikimasiSuma = "Suma: 214.89 €";
+                string tikimasiSuma = "Suma: 214.8 €";
                 Assert.AreEqual(tikimasiSuma, esamaSuma);
             }
             [TearDown]
             public static void ProgramSTOP()
             {
-                Driver.StopDriver();
+                if (TestContext.CurrentContext.Result.Outcome != ResultState.Failure)
+                {
+
+                    Driver.StopDriver();
+                }
+                else
+                {
+                    Driver.TakeScreenshot();
+                    Driver.StopDriver();
+                }
             }
 
         }
@@ -59,7 +69,16 @@ namespace Tests
             [TearDown]
             public static void ProgramSTOP()
             {
-                Driver.StopDriver();
+                if (TestContext.CurrentContext.Result.Outcome != ResultState.Failure)
+                {
+
+                    Driver.StopDriver();
+                }
+                else
+                {
+                    Driver.TakeScreenshot();
+                    Driver.StopDriver();
+                }
             }
         }
         internal class SearchBarTestMultipleOfItems
@@ -88,7 +107,16 @@ namespace Tests
             [TearDown]
             public static void ProgramSTOP()
             {
-                Driver.StopDriver();
+                if (TestContext.CurrentContext.Result.Outcome != ResultState.Failure)
+                {
+                    
+                    Driver.StopDriver();
+                }
+                else
+                {
+                    Driver.TakeScreenshot();
+                    Driver.StopDriver();
+                }
             }
         }
     }
