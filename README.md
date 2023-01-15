@@ -46,4 +46,4 @@ Say getting a great deal on some headphones wasn't enough and now you want a new
 	Step 8. Click on the Asus Version of the graphics card
 	Step 9. Select 2 and add to cart
 	Step 10. Make sure the prices are correct
-	Step 11. Sell a kidney to afford this rig(optional)
+	Step 11. Sell a kidney to afford the rig(optional)

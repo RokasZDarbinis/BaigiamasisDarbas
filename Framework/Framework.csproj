@@ -57,6 +57,8 @@
     <Compile Include="Driver.cs" />
     <Compile Include="POM\Akcijos.cs" />
     <Compile Include="POM\HomePage.cs" />
+    <Compile Include="POM\SearchBar.cs" />
+    <Compile Include="POM\ShoppingCart.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

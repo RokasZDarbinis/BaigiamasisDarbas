@@ -55,7 +55,8 @@ namespace Framework
         {
             Driver.OpenPage("https://www.skytech.lt/shopping_cart.php");
         }
-
+        
+        
         //internal static void HoverAction(string locator)
         //{
         //    IWebElement target = GetElement(locator);

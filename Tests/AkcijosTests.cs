@@ -12,30 +12,56 @@ namespace Tests
 {
     internal class AkcijosTests
     {
-        [SetUp]
-        public void Setup()
-        {
-            HomePage.Startup();
-            
-        }
+        //internal class SingularItem
+        //{
+        //    [SetUp]
+        //    public void Setup()
+        //    {
+        //        HomePage.Startup();
 
-        [Test]
-        
-        public void BuyingFromAkcijos()
-        {
-            Akcijos.GoingToAkcijosAusines();
-            Akcijos.SelectingDesiredDiscountedHeadphone();
-            Akcijos.CheckingIfItemIsStillDiscounted();
-            string actualPrice= Akcijos.CheckingIfThePriceIsStillCorrect();
-            string desiredPrice = "Suma: 77.99 €";
+        //    }
 
-            Assert.AreEqual(desiredPrice, actualPrice);
-        }
-        [TearDown]
+        //    [Test]
 
-        public void Stop()
+        //    public void BuyingFromAkcijos()
+        //    {
+        //        Akcijos.GoingToAkcijosAusines();
+        //        Akcijos.ClickingOnDesiredDiscountedHeadphone();
+        //        Akcijos.CheckingIfItemIsStillDiscounted();
+        //        string actualPrice = ShoppingCart.CheckingIfThePriceIsStillCorrect();
+        //        string desiredPrice = "Suma: 77.99 €";
+
+        //        Assert.AreEqual(desiredPrice, actualPrice);
+        //    }
+        //    [TearDown]
+
+        //    public void Stop()
+        //    {
+        //        Driver.StopDriver();
+        //    }
+        //}
+        internal class MultipleItems
         {
-            Driver.StopDriver();
+            [SetUp]
+            public void Setup()
+            {
+                HomePage.Startup(); 
+            }
+            [Test]
+            public void BuyingFromAkcijosMultiple()
+            {
+                Akcijos.GoingToAkcijosAusines();
+                Akcijos.AddingDesiredHeadphonesStraightToCart();
+                Akcijos.NavigatingToAkcijosMobTel();
+                Akcijos.DecidingWhichPhoneIsABetterDeal();
+                Akcijos.AddingBetterPhoneDealAndGoingToShoppingCart();
+                string actualPrice=ShoppingCart.CheckingIfThePriceIsStillCorrect();
+                string desiredPrice = "Suma: 1 066.99 €";
+
+                Assert.AreEqual(desiredPrice, actualPrice);
+
+
+            }
         }
     }
 }

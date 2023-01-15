@@ -24,5 +24,9 @@ namespace Framework
         {
             driver.Navigate().GoToUrl(url);
         }
+        public static void PageBack()
+        {
+            driver.Navigate().Back();
+        }
     }
 }
