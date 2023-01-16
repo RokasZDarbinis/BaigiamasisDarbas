@@ -1,6 +1,6 @@
 # BaigiamasisDarbas
 
-# www.Skytech.lt website functionality testing (yay)
+# www.Skytech.lt website functionality testing
 
 Hello, with this work I'll be trying to show what I've learnt through VilniusCodingSchool using [Skytech](https://www.skytech.lt) website as the playground.
 
