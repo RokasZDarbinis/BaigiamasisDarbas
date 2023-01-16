@@ -25,9 +25,9 @@ Say getting a great deal on some headphones wasn't enough and now you want a new
 ### Action 1: Searching and buying an item
 	Step 1. Repeat Scenario 1- Action 1- Step 1
 	Step 2. Type in "Gigabyte Z690" and click Search
-	Step 4. Click on "Gigabyte Z690 GAMING X" motherboard
-	Step 5. Click add to cart
-	Step 6. Make sure the price is right
+	Step 3. Click on "Gigabyte Z690 GAMING X" motherboard
+	Step 4. Click add to cart
+	Step 5. Make sure the price is right
 ### Action 2: Searching and buying multiple of an item
 	Step 1. Open the [page](https://www.skytech.lt)
 	Step 2. Type in "DDR4 Ram" and click Search
@@ -42,8 +42,21 @@ Say getting a great deal on some headphones wasn't enough and now you want a new
 	Step 4. Type in "i7-13700K" in the search bar and click search
 	Step 5. Click on the the CPU(not the KF or the pc's having it)
 	Step 6. Add to cart
-	Step 7. type "Rtx 4090" in the seach bar and click search
-	Step 8. Click on the Asus Version of the graphics card
-	Step 9. Select 2 and add to cart
-	Step 10. Make sure the prices are correct
-	Step 11. Sell a kidney to afford the rig(optional)
+	Step 7. Page back
+	Step 8. Clear search bar and type "Rtx 4090" in the seach bar and click search
+	Step 9. Click on the Asus Version of the graphics card
+	Step 10. Select 2 and add to cart
+	Step 11. Make sure the prices are correct
+	Step 12. Sell a kidney to afford the rig(optional)
+
+
+## Scenario 3: Navigation bar shopping
+### Action 1: Navigating through the NavBar and buying single item
+	Step 1. Open the [page](https://www.skytech.lt)
+	Step 2. Hover on Kompiuteriai,Komponentai
+	Step 3. In Kompiuteriu komponentai click Korpusai ir priedai
+	Step 4. Click on Korpusai
+	Step 5. Click on desired *RGB* case(AEROCOOL PGS CS-107-A-BK-v2 FRGB)
+	Step 6. Add to cart
+	Step 7. Go to cart
+	Step 8. Make sure the prices are correct
