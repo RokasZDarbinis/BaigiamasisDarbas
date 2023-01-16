@@ -5,6 +5,7 @@ using NUnit.Framework.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -22,14 +23,11 @@ namespace Tests
             public static void SingleItemSearch()
             {
                 SearchBar.TypeAndSeach("Z690");
-                ProductListPage.ClickOnDesiredItem("//*[@id=\"centerpanel\"]/div[1]/table[1]/tbody/tr[2]/td[3]/a");
-                //string norimasTekstas = "Gigabyte Z690 GAMING X DDR4 1.0 M/B Processor family Intel, Processor socket LGA1700, DDR4 DIMM, Memory slots 4, Supported hard disk drive interfaces ...";
-                //string patikrinimas = SearchBar.CheckIfSelectedItemIsCorrect();
-                //Assert.AreEqual(norimasTekstas, patikrinimas );
-                ProductPage.CheckIfSelectedItemIsCorrect("Gigabyte Z690 GAMING X DDR4 1.0 M/B Processor family Intel, Processor socket LGA1700, DDR4 DIMM, Memory slots 4, Supported hard disk drive interfaces ...");
+                ProductListPage.ClickOnDesiredItem("//a[contains(text(),'MSI PRO')]");
+                ProductPage.CheckIfSelectedItemIsCorrect("MSI PRO Z690-A WIFI DDR4 Processor family Intel, Processor socket LGA 1700, DDR4 DIMM, Memory slots 4, Supported hard disk drive interfaces SATA, M.2, Nu...");
                 ShoppingCart.GoToShoppingCart();
                 string esamaSuma = ShoppingCart.CheckingIfThePriceIsStillCorrect();
-                string tikimasiSuma = "Suma: 214.89 €";
+                string tikimasiSuma = "Suma: 234.99 €";
                 Assert.AreEqual(tikimasiSuma, esamaSuma);
             }
             [TearDown]
@@ -59,7 +57,7 @@ namespace Tests
             {
                 SearchBar.TypeAndSeach("DDR4 Ram");
                 ProductListPage.SelectListingOption();
-                ProductListPage.ClickOnDesiredItem("//*[@id=\"centerpanel\"]/div[1]/table[1]/tbody/tr[56]/td[3]/a");
+                ProductListPage.ClickOnDesiredItem("//a[contains(text(),'ADATA Premier DDR4 RAM 8 GB, DIMM')]");
                 ProductPage.AddMoreOfItem();
                 ProductPage.CheckIfSelectedItemIsCorrect("ADATA Premier DDR4 RAM 8 GB, DIMM, 3200 MHz");
                 ShoppingCart.GoToShoppingCart();
@@ -92,11 +90,11 @@ namespace Tests
             public static void MultipleItems()
             {
                 SearchBar.TypeAndSeach("I7 13700K");
-                ProductListPage.ClickOnDesiredItem("//*[@id=\"centerpanel\"]/div[1]/table[1]/tbody/tr[2]/td[3]/a");
+                ProductListPage.ClickOnDesiredItem("//a[contains(text(),'Intel® Core™ i7-13700K Processor')]");
                 ProductPage.CheckIfSelectedItemIsCorrect2("Intel® Core™ i7-13700K Processor, 16Cores (8P+8E) 2.5-5.4GHz, LGA 1700 (dėžutėje Intel aušintuvo neprideda)"//:C
 );
                 SearchBar.ClearSearchAndTypeAndSearch("RTX 4090");
-                ProductListPage.ClickOnDesiredItem("//*[@id=\"centerpanel\"]/div[1]/table[1]/tbody/tr[19]/td[3]/a");
+                ProductListPage.ClickOnDesiredItem("//a[contains(text(),'ASUS TUF Gaming GeForce RTX4090')]");
                 ProductPage.AddMoreOfItem();
                 ProductPage.CheckIfSelectedItemIsCorrect("ASUS TUF Gaming GeForce RTX4090 OC 24GB GDDR6X Graphics Card PCIe 4.0 HDMI 2.1a DisplayPort 1.4a");
                 ShoppingCart.GoToShoppingCart();

@@ -11,12 +11,12 @@ namespace Framework.POM
     {
         public static void GoingToAkcijosAusines()
         {
-            Common.ClickElement("//*[@id=\"leftpanel\"]/div[1]/div[1]/div[1]");
-            Common.ClickElement("//*[@id=\"leftpanel\"]/div[1]/div[1]/div[2]/ul/li[2]/a");
+            Common.ClickElement("//div[contains(text(),'AKCIJOS')]");
+            Common.WaitAndClick("//div[@class='content']//a[contains(text(),'Ausinės')]");
         }
         public static void ClickingOnDesiredDiscountedHeadphone()
         {
-            Common.ClickElement("//*[@id=\"centerpanel\"]/div[1]/table[1]/tbody/tr[7]/td[3]/a");
+            Common.ClickElement("//a[contains(text(),'Panasonic RB')]");
         }
         public static void CheckingIfItemIsStillDiscounted()
         {
@@ -24,7 +24,7 @@ namespace Framework.POM
 
             if (price == "77.99€")
             {
-                Common.ClickElement("//*[@id=\"centerpanel\"]/div[8]/div[3]/form/table/tbody/tr[2]/td/div/div/div[2]/div/div[2]/input");
+                Common.ClickElement("//div[@class='krepselis-button']");
                 
             }
             
@@ -38,17 +38,17 @@ namespace Framework.POM
 
         public static void NavigatingToAkcijosMobTel()
         {
-            //Common.ClickElement("//*[@id=\"leftpanel\"]/div[1]/div[1]/div[1]");
-            Common.ClickElement("//*[@id=\"leftpanel\"]/div[1]/div[1]/div[2]/ul/li[18]/a");
+            //Common.ClickElement("//div[contains(text(),'AKCIJOS')]");
+            Common.ClickElement("//div[@class='content']//a[contains(text(),'Mobilieji telefonai')]");
         }
 
         public static void DecidingWhichPhoneIsABetterDeal()
         {
-            Common.ClickElement("//*[@id=\"centerpanel\"]/div[1]/table[1]/tbody/tr[3]/td[3]/a");
+            Common.ClickElement("//a[contains(text(),'Xiaomi')]");
             string telefono1SenaKaina=Common.GetElementText("//span[@class='senakaina']");
             string telefono1NaujaKaina = Common.GetElementText("//span[@class='num']/span");
             Driver.PageBack();
-            Common.WaitAndClick("//*[@id=\"centerpanel\"]/div[1]/table[1]/tbody/tr[4]/td[3]/a");
+            Common.WaitAndClick("//a[contains(text(),'Samsung Galaxy')]");
             string telefono2SenaKaina= Common.GetElementText("//span[@class='senakaina']");
             string telefono2NaujaKaina= Common.GetElementText("//span[@class='num']/span");
             //programa padaro beep beep boop boop ir grazina mum skaiciu sumas integeriu panaikines taskus ir euro zenkla(neradau kaip panaikint tasko...)
@@ -57,15 +57,15 @@ namespace Framework.POM
             Driver.PageBack();
             if (telefono1Skirtumas < telefono2Skirtumas)
             {
-                Common.WaitAndClick("//*[@id=\"centerpanel\"]/div[1]/table[1]/tbody/tr[4]/td[3]/a");
+                Common.WaitAndClick("//a[contains(text(),'Samsung Galaxy')]");
             }
-            else { Common.WaitAndClick("//*[@id=\"centerpanel\"]/div[1]/table[1]/tbody/tr[3]/td[3]/a"); }
+            else { Common.WaitAndClick("//a[contains(text(),'Xiaomi')]"); }
 
         }
 
         public static void AddingBetterPhoneDealAndGoingToShoppingCart()
         {
-           Common.ClickElement("//*[@id=\"centerpanel\"]/div[8]/div[3]/form/table/tbody/tr[2]/td/div/div/div[2]/div/div[2]/input");
+           Common.ClickElement("//div[@class='krepselis-button']");
             
         }
        

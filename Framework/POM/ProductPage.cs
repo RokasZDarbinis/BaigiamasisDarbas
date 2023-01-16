@@ -22,7 +22,7 @@ namespace Framework.POM
             string patikrinimas = Common.GetElementText("//h1");
             if (patikrinimas == header)
             {
-                Common.ClickElement("//*[@id=\"centerpanel\"]/div[8]/div[3]/form/table/tbody/tr[2]/td/div/div/div[2]/div/div[2]/input");
+                Common.WaitAndClick("//div[@class='krepselis-button']//div[@class='button-label']");
                 
             }
 
@@ -32,7 +32,7 @@ namespace Framework.POM
             string patikrinimas = Common.GetElementText("//h1");
             if (patikrinimas == header)
             {
-                Common.ClickElement("//*[@id=\"centerpanel\"]/div[8]/div[3]/form/table/tbody/tr[2]/td/div/div/div[2]/div/div[2]/input");
+                Common.ClickElement("//div[@class='krepselis-button']//div[@class='button-label']");
                 Driver.PageBack();
             }
 

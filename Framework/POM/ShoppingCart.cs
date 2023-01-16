@@ -14,7 +14,7 @@ namespace Framework.POM
         }
         public static void GoToShoppingCart()
         {
-            Common.MouseHover_SubMenuClick("//*[@id=\"krepselis\"]/div/a/span", "//*[@id=\"krepselis-popup-bottom\"]/div/table/tbody/tr[2]/td/div/div/div[2]/input");
+            Common.MouseHover_SubMenuClick("//div[@id='krepselis']", "//div[@id='krepselis-popup-wrap']//div[@class='button-label']");
         }
     }
 }
