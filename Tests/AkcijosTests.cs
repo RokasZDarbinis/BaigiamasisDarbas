@@ -29,6 +29,7 @@ namespace Tests
                 Akcijos.GoingToAkcijosAusines();
                 Akcijos.ClickingOnDesiredDiscountedHeadphone();
                 Akcijos.CheckingIfItemIsStillDiscounted();
+                ShoppingCart.GoToShoppingCart();
                 string actualPrice = ShoppingCart.CheckingIfThePriceIsStillCorrect();
                 string desiredPrice = "Suma: 77.99 €";
 
@@ -65,6 +66,7 @@ namespace Tests
                 Akcijos.NavigatingToAkcijosMobTel();
                 Akcijos.DecidingWhichPhoneIsABetterDeal();
                 Akcijos.AddingBetterPhoneDealAndGoingToShoppingCart();
+                ShoppingCart.GoToShoppingCart();
                 string actualPrice = ShoppingCart.CheckingIfThePriceIsStillCorrect();
                 string desiredPrice = "Suma: 1 066.99 €";
 

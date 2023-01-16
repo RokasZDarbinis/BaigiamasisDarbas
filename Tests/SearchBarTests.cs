@@ -22,11 +22,12 @@ namespace Tests
             public static void SingleItemSearch()
             {
                 SearchBar.TypeAndSeach("Z690");
-                SearchBar.ClickOnDesiredItem("//*[@id=\"centerpanel\"]/div[1]/table[1]/tbody/tr[2]/td[3]/a");
+                ProductListPage.ClickOnDesiredItem("//*[@id=\"centerpanel\"]/div[1]/table[1]/tbody/tr[2]/td[3]/a");
                 //string norimasTekstas = "Gigabyte Z690 GAMING X DDR4 1.0 M/B Processor family Intel, Processor socket LGA1700, DDR4 DIMM, Memory slots 4, Supported hard disk drive interfaces ...";
                 //string patikrinimas = SearchBar.CheckIfSelectedItemIsCorrect();
                 //Assert.AreEqual(norimasTekstas, patikrinimas );
-                SearchBar.CheckIfSelectedItemIsCorrect("Gigabyte Z690 GAMING X DDR4 1.0 M/B Processor family Intel, Processor socket LGA1700, DDR4 DIMM, Memory slots 4, Supported hard disk drive interfaces ...");
+                ProductPage.CheckIfSelectedItemIsCorrect("Gigabyte Z690 GAMING X DDR4 1.0 M/B Processor family Intel, Processor socket LGA1700, DDR4 DIMM, Memory slots 4, Supported hard disk drive interfaces ...");
+                ShoppingCart.GoToShoppingCart();
                 string esamaSuma = ShoppingCart.CheckingIfThePriceIsStillCorrect();
                 string tikimasiSuma = "Suma: 214.89 €";
                 Assert.AreEqual(tikimasiSuma, esamaSuma);
@@ -57,10 +58,11 @@ namespace Tests
             public static void MultipleOfItem()
             {
                 SearchBar.TypeAndSeach("DDR4 Ram");
-                SearchBar.SelectListingOption();
-                SearchBar.ClickOnDesiredItem("//*[@id=\"centerpanel\"]/div[1]/table[1]/tbody/tr[56]/td[3]/a");
-                SearchBar.AddMoreOfItem();
-                SearchBar.CheckIfSelectedItemIsCorrect("ADATA Premier DDR4 RAM 8 GB, DIMM, 3200 MHz");
+                ProductListPage.SelectListingOption();
+                ProductListPage.ClickOnDesiredItem("//*[@id=\"centerpanel\"]/div[1]/table[1]/tbody/tr[56]/td[3]/a");
+                ProductPage.AddMoreOfItem();
+                ProductPage.CheckIfSelectedItemIsCorrect("ADATA Premier DDR4 RAM 8 GB, DIMM, 3200 MHz");
+                ShoppingCart.GoToShoppingCart();
                 string tikimasiSuma = "Suma: 41.98 €";
                 string esamaSuma = ShoppingCart.CheckingIfThePriceIsStillCorrect();
                 Assert.AreEqual(tikimasiSuma, esamaSuma);
@@ -90,13 +92,14 @@ namespace Tests
             public static void MultipleItems()
             {
                 SearchBar.TypeAndSeach("I7 13700K");
-                SearchBar.ClickOnDesiredItem("//*[@id=\"centerpanel\"]/div[1]/table[1]/tbody/tr[2]/td[3]/a");
-                SearchBar.CheckIfSelectedItemIsCorrect2("Intel® Core™ i7-13700K Processor, 16Cores (8P+8E) 2.5-5.4GHz, LGA 1700 (dėžutėje Intel aušintuvo neprideda)"//:C
+                ProductListPage.ClickOnDesiredItem("//*[@id=\"centerpanel\"]/div[1]/table[1]/tbody/tr[2]/td[3]/a");
+                ProductPage.CheckIfSelectedItemIsCorrect2("Intel® Core™ i7-13700K Processor, 16Cores (8P+8E) 2.5-5.4GHz, LGA 1700 (dėžutėje Intel aušintuvo neprideda)"//:C
 );
                 SearchBar.ClearSearchAndTypeAndSearch("RTX 4090");
-                SearchBar.ClickOnDesiredItem("//*[@id=\"centerpanel\"]/div[1]/table[1]/tbody/tr[19]/td[3]/a");
-                SearchBar.AddMoreOfItem();
-                SearchBar.CheckIfSelectedItemIsCorrect("ASUS TUF Gaming GeForce RTX4090 OC 24GB GDDR6X Graphics Card PCIe 4.0 HDMI 2.1a DisplayPort 1.4a");
+                ProductListPage.ClickOnDesiredItem("//*[@id=\"centerpanel\"]/div[1]/table[1]/tbody/tr[19]/td[3]/a");
+                ProductPage.AddMoreOfItem();
+                ProductPage.CheckIfSelectedItemIsCorrect("ASUS TUF Gaming GeForce RTX4090 OC 24GB GDDR6X Graphics Card PCIe 4.0 HDMI 2.1a DisplayPort 1.4a");
+                ShoppingCart.GoToShoppingCart();
                 string tikimasiSuma = "Suma: 5 265.00 €";
                 string esamaSuma = ShoppingCart.CheckingIfThePriceIsStillCorrect();
                 Assert.AreEqual(tikimasiSuma, esamaSuma);

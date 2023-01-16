@@ -67,12 +67,17 @@ namespace Framework
         }
 
 
-        //internal static void HoverAction(string locator)
-        //{
-        //    IWebElement target = GetElement(locator);
-        //    Actions action= new Actions(Driver.GetDriver());
-        //    action.MoveToElement(target);
-        //}
+        public static void MouseHover_SubMenuClick(string PrimaryMenu, string SubMenu)
+        {
+              
+            WebDriverWait wait = new WebDriverWait(Driver.GetDriver(), TimeSpan.FromSeconds(10));
+            var element = wait.Until(ExpectedConditions.ElementIsVisible(By.XPath(PrimaryMenu)));
+            Actions action = new Actions(Driver.GetDriver());
+            action.MoveToElement(element).Perform();
+             
+            var menuelement = GetElement(SubMenu);
+            menuelement.Click();
+        }
 
     }
 }

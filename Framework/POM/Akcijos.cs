@@ -25,7 +25,7 @@ namespace Framework.POM
             if (price == "77.99€")
             {
                 Common.ClickElement("//*[@id=\"centerpanel\"]/div[8]/div[3]/form/table/tbody/tr[2]/td/div/div/div[2]/div/div[2]/input");
-                Common.GoToShoppingCart();
+                
             }
             
 
@@ -66,7 +66,7 @@ namespace Framework.POM
         public static void AddingBetterPhoneDealAndGoingToShoppingCart()
         {
            Common.ClickElement("//*[@id=\"centerpanel\"]/div[8]/div[3]/form/table/tbody/tr[2]/td/div/div/div[2]/div/div[2]/input");
-            Common.GoToShoppingCart();
+            
         }
        
     }
