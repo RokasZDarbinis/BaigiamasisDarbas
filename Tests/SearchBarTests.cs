@@ -28,7 +28,7 @@ namespace Tests
                 //Assert.AreEqual(norimasTekstas, patikrinimas );
                 SearchBar.CheckIfSelectedItemIsCorrect("Gigabyte Z690 GAMING X DDR4 1.0 M/B Processor family Intel, Processor socket LGA1700, DDR4 DIMM, Memory slots 4, Supported hard disk drive interfaces ...");
                 string esamaSuma = ShoppingCart.CheckingIfThePriceIsStillCorrect();
-                string tikimasiSuma = "Suma: 214.8 €";
+                string tikimasiSuma = "Suma: 214.89 €";
                 Assert.AreEqual(tikimasiSuma, esamaSuma);
             }
             [TearDown]
