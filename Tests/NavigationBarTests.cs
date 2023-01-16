@@ -65,7 +65,7 @@ namespace Tests
                 ProductListPage.ClickOnDesiredItem("//*[@id=\"centerpanel\"]/div[2]/table[1]/tbody/tr[61]/td[3]/a");
                 ProductPage.CheckIfSelectedItemIsCorrect("Power Supply|BE QUIET|1500 Watts|Peak Power 1600 Watts|Efficiency 80 PLUS TITANIUM|PFC Active|MTBF 300000 hours|BN312");
                 ShoppingCart.GoToShoppingCart();
-                string productsPrice = "Suma: 508.9 €";
+                string productsPrice = "Suma: 508.99 €";
                 string cartPrice=ShoppingCart.CheckingIfThePriceIsStillCorrect();
                 Assert.AreEqual(productsPrice, cartPrice);
 

@@ -61,3 +61,15 @@ Say getting a great deal on some headphones wasn't enough and now you want a new
 	Step 6. Add to cart
 	Step 7. Go to cart
 	Step 8. Make sure the prices are correct
+### Action 2: Navigating through the NavBar and buying multiple items
+	Step 1. Repeat Action 1, step 1-2
+	Step 2. In Kompiuteriu komponentai click SSD,HDD ir priedai
+	Step 3. Click SSD
+	Step 4. Click on an SSD(Adata Ultimate SU650)
+	Step 5. Make sure it's the same item and add to cart
+	Step 6. Repeat Action 1, step 2
+	Step 7. Click on maitinimo blokai
+	Step 8. Click on a power supply powerful enough to handle the 2 graphics cards(Power supply be quiet 1500 watts)
+	Step 9. Add to cart
+	Step 10. Go to cart
+	Step 11. Make sure the prices are correct (508.99 eur)
