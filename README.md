@@ -7,7 +7,7 @@ Hello, with this work I'll be trying to show what I've learnt through VilniusCod
 ## Scenario 1: Shopping from the homepage
 
 ### Action 1: Sale shopping(single item)
-	Step 1. Open the https://www.skytech.lt
+	Step 1. Open the https://www.skytech.lt page
 	Step 2. Navigate to Akcijos-Ausines
 	Step 3. Select desired headphone(Panasonic RB-M500BE-C for that great bass)
 	Step 4. Make sure the price is still discounted and add to cart
@@ -30,7 +30,7 @@ Say getting a great deal on some headphones wasn't enough and now you want a new
 	Step 4. Click add to cart
 	Step 5. Make sure the price is right
 ### Action 2: Searching and buying multiple of an item
-	Step 1. Open the https://www.skytech.lt
+	Step 1. Open the https://www.skytech.lt page
 	Step 2. Type in "DDR4 Ram" and click Search
 	Step 3. Select "Rusiavimas: Kaina 1-100"
 	Step 4. Click on "ADATA Premier DDR4 RAM 8 GB, DIMM, 3200 MHz" Ram
@@ -39,7 +39,7 @@ Say getting a great deal on some headphones wasn't enough and now you want a new
 ### Action 3: Searching and buying multiple itemS
 	Step 1. Google the best proccesor for 2023 *gaming*
 	Step 2. Pick Intels anyway
-	Step 3. Open the https://www.skytech.lt
+	Step 3. Open the https://www.skytech.lt page
 	Step 4. Type in "i7-13700K" in the search bar and click search
 	Step 5. Click on the the CPU(not the KF or the pc's having it)
 	Step 6. Add to cart
@@ -53,7 +53,7 @@ Say getting a great deal on some headphones wasn't enough and now you want a new
 
 ## Scenario 3: Navigation bar shopping
 ### Action 1: Navigating through the NavBar and buying single item
-	Step 1. Open the https://www.skytech.lt
+	Step 1. Open the https://www.skytech.lt page
 	Step 2. Hover on Kompiuteriai,Komponentai
 	Step 3. In Kompiuteriu komponentai click Korpusai ir priedai
 	Step 4. Click on Korpusai
