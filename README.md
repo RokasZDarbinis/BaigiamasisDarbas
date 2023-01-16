@@ -15,6 +15,7 @@ Hello, with this work I'll be trying to show what I've learnt through VilniusCod
 	Step 6. Make sure the site isn't "pulling your leg" with the price
 ### Action 2: Sale shopping(Multiple items)
 Say getting a great deal on some headphones wasn't enough and now you want a new phone that could handle all that bass (yo), but is it possible? Well let's test for it!
+
 	Step 1. Repeat steps 1-3 from Action 1
 	Step 2. Navigate to Akcijos-Mobilieji Telefonai
 	Step 3. Compare the prices of the 2 phones to get the best deal
