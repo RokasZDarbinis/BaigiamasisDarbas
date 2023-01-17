@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Framework.POM
+﻿namespace Framework.POM
 {
     public class NavigationBar
     {
@@ -12,10 +6,10 @@ namespace Framework.POM
         {
             Common.MouseHover_SubMenuClick(menuLocator, submenuLocator);
         }
+
         public static void ClickingOnWantedMenu(string locator)
         {
             Common.WaitAndClick(locator);
         }
-
     }
 }

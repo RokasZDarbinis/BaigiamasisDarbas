@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Framework.POM
+﻿namespace Framework.POM
 {
     public class ProductPage
     {
@@ -23,10 +17,9 @@ namespace Framework.POM
             if (patikrinimas == header)
             {
                 Common.WaitAndClick("//div[@class='krepselis-button']//div[@class='button-label']");
-                
             }
-
         }
+
         public static void CheckIfSelectedItemIsCorrect2(string header)
         {
             string patikrinimas = Common.GetElementText("//h1");
@@ -35,7 +28,6 @@ namespace Framework.POM
                 Common.ClickElement("//div[@class='krepselis-button']//div[@class='button-label']");
                 Driver.PageBack();
             }
-
         }
     }
 }
