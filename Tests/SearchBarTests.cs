@@ -2,12 +2,6 @@
 using Framework.POM;
 using NUnit.Framework;
 using NUnit.Framework.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.AccessControl;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Tests
 {
@@ -16,7 +10,10 @@ namespace Tests
         internal class SearchBarTestSingle
         {
             [SetUp]
-            public static void SetUp() { HomePage.Startup(); }
+            public static void SetUp() 
+            { 
+                HomePage.Startup(); 
+            }
 
             [Test]
 
@@ -30,12 +27,12 @@ namespace Tests
                 string tikimasiSuma = "Suma: 234.99 €";
                 Assert.AreEqual(tikimasiSuma, esamaSuma);
             }
+
             [TearDown]
             public static void ProgramSTOP()
             {
                 if (TestContext.CurrentContext.Result.Outcome != ResultState.Failure)
                 {
-
                     Driver.StopDriver();
                 }
                 else
@@ -44,15 +41,17 @@ namespace Tests
                     Driver.StopDriver();
                 }
             }
-
         }
+
         internal class SearchBarTestsMultipleOfItem
         {
             [SetUp]
-            public static void SetUp() { HomePage.Startup(); }
+            public static void SetUp() 
+            { 
+                HomePage.Startup(); 
+            }
 
             [Test]
-
             public static void MultipleOfItem()
             {
                 SearchBar.TypeAndSeach("DDR4 Ram");
@@ -66,6 +65,7 @@ namespace Tests
                 Assert.AreEqual(tikimasiSuma, esamaSuma);
 
             }
+
             [TearDown]
             public static void ProgramSTOP()
             {
@@ -84,15 +84,17 @@ namespace Tests
         internal class SearchBarTestMultipleOfItems
         {
             [SetUp]
-            public static void SetUp() { HomePage.Startup(); }
+            public static void SetUp() 
+            { 
+                HomePage.Startup(); 
+            }
 
             [Test]
             public static void MultipleItems()
             {
                 SearchBar.TypeAndSeach("I7 13700K");
                 ProductListPage.ClickOnDesiredItem("//a[contains(text(),'Intel® Core™ i7-13700K Processor')]");
-                ProductPage.CheckIfSelectedItemIsCorrect2("Intel® Core™ i7-13700K Processor, 16Cores (8P+8E) 2.5-5.4GHz, LGA 1700 (dėžutėje Intel aušintuvo neprideda)"//:C
-);
+                ProductPage.CheckIfSelectedItemIsCorrect2("Intel® Core™ i7-13700K Processor, 16Cores (8P+8E) 2.5-5.4GHz, LGA 1700 (dėžutėje Intel aušintuvo neprideda)");
                 SearchBar.ClearSearchAndTypeAndSearch("RTX 4090");
                 ProductListPage.ClickOnDesiredItem("//a[contains(text(),'ASUS TUF Gaming GeForce RTX4090')]");
                 ProductPage.AddMoreOfItem();
@@ -101,10 +103,8 @@ namespace Tests
                 string tikimasiSuma = "Suma: 5 265.00 €";
                 string esamaSuma = ShoppingCart.CheckingIfThePriceIsStillCorrect();
                 Assert.AreEqual(tikimasiSuma, esamaSuma);
-
-                
-
             }
+
             [TearDown]
             public static void ProgramSTOP()
             {
@@ -122,10 +122,3 @@ namespace Tests
         }
     }
 }
-        
-
-           
-        
-        
-
-

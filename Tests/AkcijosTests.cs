@@ -2,12 +2,6 @@
 using Framework.POM;
 using NUnit.Framework;
 using NUnit.Framework.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.AccessControl;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Tests
 {
@@ -19,11 +13,9 @@ namespace Tests
             public void Setup()
             {
                 HomePage.Startup();
-
             }
 
             [Test]
-
             public void BuyingFromAkcijos()
             {
                 Akcijos.GoingToAkcijosAusines();
@@ -35,8 +27,8 @@ namespace Tests
 
                 Assert.AreEqual(desiredPrice, actualPrice);
             }
+            
             [TearDown]
-
             public void Stop()
             {
                 if (TestContext.CurrentContext.Result.Outcome != ResultState.Failure)
@@ -58,6 +50,7 @@ namespace Tests
             {
                 HomePage.Startup();
             }
+
             [Test]
             public void BuyingFromAkcijosMultiple()
             {
@@ -74,6 +67,7 @@ namespace Tests
 
 
             }
+
             [TearDown]
             public static void ProgramSTOP()
             {
