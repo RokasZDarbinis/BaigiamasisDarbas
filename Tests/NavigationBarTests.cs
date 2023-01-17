@@ -2,11 +2,6 @@
 using Framework.POM;
 using NUnit.Framework;
 using NUnit.Framework.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Tests
 {
@@ -17,7 +12,10 @@ namespace Tests
         {
             [SetUp]
 
-            public static void SetUp() { HomePage.Startup(); }
+            public static void SetUp() 
+            { 
+                HomePage.Startup(); 
+            }
 
             [Test]
             public static void SingleItemNavBarTestt()
@@ -31,12 +29,12 @@ namespace Tests
                 string cartPrice = ShoppingCart.CheckingIfThePriceIsStillCorrect();
                 Assert.AreEqual(productPrice, cartPrice);
             }
+
             [TearDown]
             public static void ProgramSTOP()
             {
                 if (TestContext.CurrentContext.Result.Outcome != ResultState.Failure)
                 {
-
                     Driver.StopDriver();
                 }
                 else
@@ -52,7 +50,10 @@ namespace Tests
         {
             [SetUp]
 
-            public static void SetUp() { HomePage.Startup(); }
+            public static void SetUp() 
+            { 
+                HomePage.Startup(); 
+            }
 
             [Test]
             public static void MultipleItemNavBarTest()
@@ -70,6 +71,7 @@ namespace Tests
                 Assert.AreEqual(productsPrice, cartPrice);
 
             }
+
             [TearDown]
             public static void ProgramSTOP()
             {
@@ -86,5 +88,4 @@ namespace Tests
             }
         }
     }
-    
 }

@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Framework.POM
 {
@@ -14,10 +9,12 @@ namespace Framework.POM
             Common.ClickElement("//div[contains(text(),'AKCIJOS')]");
             Common.WaitAndClick("//div[@class='content']//a[contains(text(),'Ausinės')]");
         }
+
         public static void ClickingOnDesiredDiscountedHeadphone()
         {
             Common.ClickElement("//a[contains(text(),'Panasonic RB')]");
         }
+
         public static void CheckingIfItemIsStillDiscounted()
         {
             String price = Common.GetElementText("//span[@class='num']/span");
@@ -25,10 +22,7 @@ namespace Framework.POM
             if (price == "77.99€")
             {
                 Common.ClickElement("//div[@class='krepselis-button']");
-                
             }
-            
-
         }
 
         public static void AddingDesiredHeadphonesStraightToCart()
@@ -59,15 +53,15 @@ namespace Framework.POM
             {
                 Common.WaitAndClick("//a[contains(text(),'Samsung Galaxy')]");
             }
-            else { Common.WaitAndClick("//a[contains(text(),'Xiaomi')]"); }
-
+            else 
+            { 
+                Common.WaitAndClick("//a[contains(text(),'Xiaomi')]"); 
+            }
         }
 
         public static void AddingBetterPhoneDealAndGoingToShoppingCart()
         {
            Common.ClickElement("//div[@class='krepselis-button']");
-            
         }
-       
     }
 }

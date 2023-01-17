@@ -3,10 +3,6 @@ using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
 using SeleniumExtras.WaitHelpers;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Framework
 {
@@ -16,15 +12,17 @@ namespace Framework
         {
             return Driver.GetDriver().FindElement(By.XPath(locator));
         }
+
         public static void ClickElement(string locator)
         {
             Driver.GetDriver().FindElement(By.XPath(locator)).Click();
         }
+
         internal static void SendKeys(string locator, string keys)
         {
             GetElement(locator).SendKeys(keys);
-
         }
+
         internal static void WaitForElementToBeClickable(string locator)
         {
             WebDriverWait wait = new WebDriverWait(Driver.GetDriver(), TimeSpan.FromSeconds(5));
@@ -36,40 +34,25 @@ namespace Framework
             WaitForElementToBeClickable(locator);
             ClickElement(locator);
         }
+
         private static SelectElement GetSelectElement(string locator)
         {
             IWebElement element = GetElement(locator);
             return new SelectElement(element);
         }
-        internal static void SelectOptionByValue(string selectElementLocator, string value)
-        {
-            SelectElement selectElement = GetSelectElement(selectElementLocator);
-            selectElement.SelectByValue(value);
-        }
+
         internal static string GetElementText(string locator)
         {
             return GetElement(locator).Text;
         }
 
-        internal static void GoToShoppingCart()
-        {
-            Driver.OpenPage("https://www.skytech.lt/shopping_cart.php");
-        }
         internal static void ClearInputElement(string locator)
         {
             GetElement(locator).Clear();
         }
 
-        internal static void SelectOptionByText(string selectElementLocator, string optionText)
-        {
-            SelectElement selectElement = GetSelectElement(selectElementLocator);
-            selectElement.SelectByText(optionText);
-        }
-
-
         public static void MouseHover_SubMenuClick(string PrimaryMenu, string SubMenu)
         {
-              
             WebDriverWait wait = new WebDriverWait(Driver.GetDriver(), TimeSpan.FromSeconds(10));
             var element = wait.Until(ExpectedConditions.ElementIsVisible(By.XPath(PrimaryMenu)));
             Actions action = new Actions(Driver.GetDriver());
@@ -78,6 +61,5 @@ namespace Framework
             var menuelement = GetElement(SubMenu);
             menuelement.Click();
         }
-
     }
 }
